@@ -1,0 +1,16 @@
+{
+  "name": "lucapiservice",
+  "version": "1.0.0",
+  "description": "api ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aman and Aditya",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "googleapis": "^133.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fetch Data from Express Server</title>
+</head>
+<body>
+<button onclick="fetchData()">Fetch Data</button>
+
+<script>
+function fetchData() {
+  fetch('http://localhost:5000/')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Data:', data);
+      window.location.href = data.url
+      // Process the fetched data here
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+</script>
+</body>
+</html>
